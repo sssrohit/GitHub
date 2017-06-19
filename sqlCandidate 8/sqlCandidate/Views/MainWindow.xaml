@@ -1,0 +1,101 @@
+﻿<Window x:Class="sqlCandidate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:sqlCandidate.ViewModels"
+        Title="Super Simple Software" Height="500" Width="1550">
+
+    <Window.DataContext>
+        <local:MainViewModel x:Name="vm"></local:MainViewModel>
+    </Window.DataContext>
+
+
+
+    <Grid >
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Exit" Click="MenuItem_Click" />
+                </MenuItem>
+                <MenuItem Header="About Us" Click="MenuItem_Click_1"/>
+            </Menu>
+        </DockPanel>
+
+        <TextBlock Text="Candidate Form" FontSize="25" Foreground="Chocolate" Margin="5,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <ListView Name="listname" Margin="10,43,10,199" ItemsSource="{Binding CandidateTable}" BorderThickness="2" >
+            <!--ItemsSource="{Binding CandidateTable}"-->
+            <ListView.ItemContainerStyle >
+                <Style TargetType="{x:Type ListViewItem}" >
+                    <Setter Property="BorderBrush" Value="LightBlue" />
+                    <Setter Property="BorderThickness" Value="1,1,1,1" />
+                    <Setter Property="Margin" Value="2,0,0,0"/>
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+
+                <GridView>
+                    <GridViewColumn Header="Sr. No" Width="40" DisplayMemberBinding="{Binding Path=Sr_No}"  />
+                    <GridViewColumn Header="Date" Width="100" DisplayMemberBinding="{Binding Path=Date_Candidate}" />
+                    <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Path=Name_Candidate}" />
+                    <GridViewColumn Header="Position" Width="100" DisplayMemberBinding="{Binding Path=Position_Candidate}" />
+                    <GridViewColumn Header="Work Location" Width="100" DisplayMemberBinding="{Binding Path=WorkLocation_Candidate}" />
+                    <GridViewColumn Header="Current Location" Width="100" DisplayMemberBinding="{Binding Path=CurrentLocation_Candidate}"/>
+                    <GridViewColumn Header="Contact No." Width="100" DisplayMemberBinding="{Binding Path=ContactNo_Candidate}" />
+                    <GridViewColumn Header="Email Id" Width="160" DisplayMemberBinding="{Binding Path=EmailId_Candidate}" />
+                    <GridViewColumn Header="Qualification" Width="100" DisplayMemberBinding="{Binding Path=Qualification_Candidate}" />
+                    <GridViewColumn Header="Top Exp." Width="100" DisplayMemberBinding="{Binding Path=TopExp_Candidate}" />
+                    <GridViewColumn Header="Relevant Exp." Width="100" DisplayMemberBinding="{Binding Path=RelevantExp_Candidate}" />
+                    <GridViewColumn Header="Current Comp." Width="100" DisplayMemberBinding="{Binding Path=CurrentCompany_Candidate}" />
+                    <GridViewColumn Header="Current CTC" Width="100" DisplayMemberBinding="{Binding Path=CurrentCTC_Candidate}" />
+                    <GridViewColumn Header="Expected CTC" Width="100" DisplayMemberBinding="{Binding Path=ExpectedCTC_Candidate}" />
+                    <GridViewColumn Header="Notice Period" Width="100" DisplayMemberBinding="{Binding Path=NoticePeriod_Candidate}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <TextBox Name="srnoTB" Text="{Binding ElementName=listname, Path=SelectedItem.Sr_No ,Mode=TwoWay}" Height="20" Margin="62,0,0,141" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100" Visibility="Hidden"/>
+        <TextBox Name="dateTB" Text="{Binding ElementName=listname, Path=SelectedItem.Date_Candidate ,Mode=TwoWay}" Height="20" Margin="96,0,0,141" HorizontalAlignment="Left" Width="100" VerticalAlignment="Bottom"/>
+        <TextBox Name="nameTB" Text="{Binding ElementName=listname, Path=SelectedItem.Name_Candidate ,Mode=TwoWay}" Width="100" Margin="266,0,0,141" HorizontalAlignment="Left" Height="20" VerticalAlignment="Bottom" />
+        <TextBox Name="positionTB" Text="{Binding ElementName=listname, Path=SelectedItem.Position_Candidate ,Mode=TwoWay}" Height="20" Margin="476,0,0,141" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="worklocationTB" Text="{Binding ElementName=listname, Path=SelectedItem.WorkLocation_Candidate ,Mode=TwoWay}" Height="20" Margin="715,0,0,141" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="currentlocationTB" Text="{Binding ElementName=listname, Path=SelectedItem.CurrentLocation_Candidate ,Mode=TwoWay}" Width="100" Margin="957,0,0,141" HorizontalAlignment="Left" Height="20" VerticalAlignment="Bottom" />
+        <TextBox Name="contactnoTB" Text="{Binding ElementName=listname, Path=SelectedItem.ContactNo_Candidate ,Mode=TwoWay}" Height="20" Margin="1170,0,0,141" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="emailTB" Text="{Binding ElementName=listname, Path=SelectedItem.EmailId_Candidate ,Mode=TwoWay}" Height="20" Margin="1368,0,0,141" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="164"/>
+        <TextBox Name="qualificationTB" Text="{Binding ElementName=listname, Path=SelectedItem.Qualification_Candidate ,Mode=TwoWay}" Height="20" Margin="96,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="topexpTB" Text="{Binding ElementName=listname, Path=SelectedItem.TopExp_Candidate ,Mode=TwoWay}" Height="20" Margin="266,0,0,86" HorizontalAlignment="Left" Width="100" VerticalAlignment="Bottom"/>
+        <TextBox Name="relevantexpTB" Text="{Binding ElementName=listname, Path=SelectedItem.RelevantExp_Candidate ,Mode=TwoWay}" Height="20" Margin="476,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="currentcompanyTB" Text="{Binding ElementName=listname, Path=SelectedItem.CurrentCompany_Candidate ,Mode=TwoWay}" Height="20" Margin="715,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="currentctcTB" Text="{Binding ElementName=listname, Path=SelectedItem.CurrentCTC_Candidate ,Mode=TwoWay}" Height="20" Margin="957,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="expectedctcTB" Text="{Binding ElementName=listname, Path=SelectedItem.ExpectedCTC_Candidate ,Mode=TwoWay}" Height="20" Margin="1170,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <TextBox Name="noticeperiodTB" Text="{Binding ElementName=listname, Path=SelectedItem.NoticePeriod_Candidate ,Mode=TwoWay}" Height="20" Margin="1368,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
+        <!--<StackPanel Margin="10,398,10,0" VerticalAlignment="Top" Orientation="Horizontal">-->
+
+        <Button Content="Add" Click="Button_Click" Name="addBtn" Width="150" Margin="298,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
+        <Button Content="Delete" Click="deleteBtn_Click" Name="deleteBtn" Width="150" Margin="534,0,0,11" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
+        <Button Content="Exit" Click="exitBtn_Click" Name="exitBtn" Width="150" Margin="957,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
+        <Button Content="Update" Click="updateBtn_Click" Name="updateBtn" Width="150" Margin="737,0,0,11" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
+        <Button Content="Clear" Click="clearBtn_Click" Name="clearBtn" Width="105" Margin="1423,0,0,10" HorizontalAlignment="Left" Height="29" VerticalAlignment="Bottom"/>
+
+        <!--Command="{Binding Add}"-->
+        <!--</StackPanel>-->
+        <TextBlock Text="Sr. No" Margin="22,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" Visibility="Hidden" />
+        <TextBlock Text="Date" Margin="24,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Name" Margin="218,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Position" Margin="390,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Work Location" Margin="607,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Current Location" Margin="862,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Contact No." Margin="1085,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Email" Margin="1293,0,0,145" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Qualification" Margin="24,0,0,90" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Top Exp." Margin="218,0,0,90" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Relevant Exp." Margin="390,0,0,90" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Current Company" Margin="607,0,0,90" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Current CTC" Margin="862,0,0,90" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Expected CTC" Margin="1085,0,0,90" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock Text="Notice Period" Margin="1293,0,0,90" HorizontalAlignment="Left" Height="16" VerticalAlignment="Bottom" />
+
+    </Grid>
+</Window>
