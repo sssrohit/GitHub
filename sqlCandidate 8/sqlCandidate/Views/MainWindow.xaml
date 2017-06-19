@@ -73,6 +73,8 @@
         <TextBox Name="noticeperiodTB" Text="{Binding ElementName=listname, Path=SelectedItem.NoticePeriod_Candidate ,Mode=TwoWay}" Height="20" Margin="1368,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
         <!--<StackPanel Margin="10,398,10,0" VerticalAlignment="Top" Orientation="Horizontal">-->
 
+        
+        
         <Button Content="Add" Click="Button_Click" Name="addBtn" Width="150" Margin="298,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
         <Button Content="Delete" Click="deleteBtn_Click" Name="deleteBtn" Width="150" Margin="534,0,0,11" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
         <Button Content="Exit" Click="exitBtn_Click" Name="exitBtn" Width="150" Margin="957,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>

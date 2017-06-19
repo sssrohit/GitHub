@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sqlCandidate", "sqlCandidate\sqlCandidate.csproj", "{D4EC73B6-0AD1-4ED1-BFE8-D61BE51CA88A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseData", "ParseData\ParseData.csproj", "{9792D1E7-FA76-45C6-B149-FFB0478417CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D4EC73B6-0AD1-4ED1-BFE8-D61BE51CA88A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4EC73B6-0AD1-4ED1-BFE8-D61BE51CA88A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4EC73B6-0AD1-4ED1-BFE8-D61BE51CA88A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9792D1E7-FA76-45C6-B149-FFB0478417CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9792D1E7-FA76-45C6-B149-FFB0478417CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9792D1E7-FA76-45C6-B149-FFB0478417CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9792D1E7-FA76-45C6-B149-FFB0478417CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
