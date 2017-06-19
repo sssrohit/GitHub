@@ -10,6 +10,7 @@ namespace sqlCandidate.Models
         public class Candidate
         {
             
+
         }
     
 }

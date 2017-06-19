@@ -20,8 +20,7 @@ namespace sqlCandidate
             string relevantexp, string currentcompany, string currentctc, string expectedctc, string noticeperiod)
         {
 
-            CandidateDbaseContext dc;
-            dc = new CandidateDbaseContext(Properties.Settings.Default.DatabasePath);
+            CandidateDbaseContext dc = new CandidateDbaseContext(Properties.Settings.Default.DatabasePath);
 
 
             try

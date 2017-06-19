@@ -73,10 +73,10 @@
         <TextBox Name="noticeperiodTB" Text="{Binding ElementName=listname, Path=SelectedItem.NoticePeriod_Candidate ,Mode=TwoWay}" Height="20" Margin="1368,0,0,86" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100"/>
         <!--<StackPanel Margin="10,398,10,0" VerticalAlignment="Top" Orientation="Horizontal">-->
 
-        <Button Content="Add" Click="Button_Click" Name="addBtn" Width="150" Margin="298,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
-        <Button Content="Delete" Click="deleteBtn_Click" Name="deleteBtn" Width="150" Margin="534,0,0,11" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
-        <Button Content="Exit" Click="exitBtn_Click" Name="exitBtn" Width="150" Margin="957,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
-        <Button Content="Update" Click="updateBtn_Click" Name="updateBtn" Width="150" Margin="737,0,0,11" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom"/>
+        <Button Content="Add" Click="Button_Click" Name="addBtn" Width="150" Margin="298,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Delete" Click="deleteBtn_Click" Name="deleteBtn" Width="150" Margin="534,0,0,11" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Exit" Click="exitBtn_Click" Name="exitBtn" Width="150" Margin="957,0,0,10" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Update" Click="updateBtn_Click" Name="updateBtn" Width="150" Margin="737,0,0,11" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
         <Button Content="Clear" Click="clearBtn_Click" Name="clearBtn" Width="105" Margin="1423,0,0,10" HorizontalAlignment="Left" Height="29" VerticalAlignment="Bottom"/>
 
         <!--Command="{Binding Add}"-->
