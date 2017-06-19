@@ -11,5 +11,7 @@ namespace sqlCandidate.ViewModels
     public class MainViewModel
     {
 
+
+
     }
 }
