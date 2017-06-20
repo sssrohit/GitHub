@@ -157,6 +157,11 @@ namespace sqlCandidate
             MessageBox.Show(" \b Super Simple Software \n \b Created by Mr. Rohit \n \b Under the guidance of Mr. Prashant Sir");
         }
 
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
 
     }

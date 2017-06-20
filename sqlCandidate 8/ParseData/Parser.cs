@@ -29,7 +29,8 @@ namespace ParseData
 
 
             DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[9] { 
+            dt.Columns.AddRange(new DataColumn[9]
+            { 
                             new DataColumn("Name", typeof(string)),
                             new DataColumn("Email", typeof(string)),
                             new DataColumn("Phone", typeof(string)),

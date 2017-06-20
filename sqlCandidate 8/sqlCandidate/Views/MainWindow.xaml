@@ -13,7 +13,7 @@
     <Grid >
         <DockPanel>
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="_File">
+                <MenuItem Header="_File" Click="MenuItem_Click_2">
                     <MenuItem Header="_Exit" Click="MenuItem_Click" />
                 </MenuItem>
                 <MenuItem Header="About Us" Click="MenuItem_Click_1"/>
