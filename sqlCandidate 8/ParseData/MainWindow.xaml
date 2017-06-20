@@ -4,10 +4,10 @@
         Title="MainWindow" Height="500" Width="1550">
     <Grid>
         <TextBlock Text="Resume Parser" FontSize="25" Foreground="Chocolate" Margin="5,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <ListView Name="listname1" Margin="10,43,10,189" ItemsSource="{Binding CandidateTable}" BorderThickness="2" SelectionChanged="listname1_SelectionChanged">
+        <ListView Name="listname1" Margin="10,43,10,189" ItemsSource="{Binding ResumeTable}" BorderThickness="2" >
             <!--ItemsSource="{Binding CandidateTable}"-->
             <ListView.ItemContainerStyle>
-                <Style TargetType="{x:Type ListViewItem}" >
+                <Style TargetType="{x:Type ListViewItem}">
                     <Setter Property="BorderBrush" Value="LightBlue" />
                     <Setter Property="BorderThickness" Value="1,1,1,1" />
                     <Setter Property="Margin" Value="2,0,0,0"/>
@@ -26,10 +26,12 @@
                     <GridViewColumn Header="Summary" Width="220" DisplayMemberBinding="{Binding Path=Summary}"/>
                     <GridViewColumn Header="Experience" Width="220" DisplayMemberBinding="{Binding Path=Experience}"/>
                     <GridViewColumn Header="Education" Width="210" DisplayMemberBinding="{Binding Path=Education}"/>
-                    
-
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <Button Content="Parse" Click="parseBtn_Click" Name="parseBtn" Width="150" Margin="1304,0,0,112" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Select File" Click="selectBtn_Click" Name="selectBtn" Width="150" Margin="1096,0,0,112" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
+        <TextBox Name="selectfileTB" Height="33" Margin="715,0,0,112" HorizontalAlignment="Left" Width="284" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

@@ -22,7 +22,7 @@ namespace ParseData
 	using System;
 
     //"F:\\Rohit\\c#learning\\Databases\\ResumeDB.sdf"
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name=Properties.Settings.Default.ResumeDBpath)]
+    [global::System.Data.Linq.Mapping.DatabaseAttribute(Name = "F:\\Rohit\\c#learning\\Databases\\ResumeDB.sdf")]
 	public partial class ResumeDBContext : System.Data.Linq.DataContext
 	{
 		
