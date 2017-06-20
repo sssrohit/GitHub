@@ -23,6 +23,13 @@ namespace ParseData
         public MainWindow()
         {
             InitializeComponent();
+            ResumeDBContext dc = new ResumeDBContext(Properties.Settings.Default.ResumeDBpath);
+            listname1.ItemsSource = dc.ResumeTable;
+        }
+
+        private void listname1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
