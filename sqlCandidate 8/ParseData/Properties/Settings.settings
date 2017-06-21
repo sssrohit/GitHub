@@ -5,5 +5,17 @@
     <Setting Name="ResumeDBpath" Type="System.String" Scope="User">
       <Value Profile="(Default)">F:\Rohit\c#learning\Databases\ResumeDB.sdf</Value>
     </Setting>
+    <Setting Name="TempResumeFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\Temp</Value>
+    </Setting>
+    <Setting Name="TempOutput" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut</Value>
+    </Setting>
+    <Setting Name="TempOutFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut\Convert\input.doc</Value>
+    </Setting>
+    <Setting Name="TempInFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\Temp\Input\input.txt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

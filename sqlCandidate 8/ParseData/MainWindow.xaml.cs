@@ -13,8 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
-//using System.Windows.Forms;
-using System.Windows;
+using System.Data;
 
 namespace ParseData
 {
@@ -34,7 +33,13 @@ namespace ParseData
 
         private void parseBtn_Click(object sender, RoutedEventArgs e)
         {
+            Parser parser = new Parser();
+            parser.ParseData();
+            
+            DataTable dt = new DataTable();
 
+            listname1.ItemsSource = dt.DefaultView;
+           
         }
 
         private void selectBtn_Click(object sender, RoutedEventArgs e)
@@ -79,6 +84,11 @@ namespace ParseData
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

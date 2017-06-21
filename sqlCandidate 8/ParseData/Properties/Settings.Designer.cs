@@ -34,5 +34,53 @@ namespace ParseData.Properties {
                 this["ResumeDBpath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\Temp")]
+        public string TempResumeFolder {
+            get {
+                return ((string)(this["TempResumeFolder"]));
+            }
+            set {
+                this["TempResumeFolder"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\TempOut")]
+        public string TempOutput {
+            get {
+                return ((string)(this["TempOutput"]));
+            }
+            set {
+                this["TempOutput"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\TempOut\\Convert\\input.doc")]
+        public string TempOutFile {
+            get {
+                return ((string)(this["TempOutFile"]));
+            }
+            set {
+                this["TempOutFile"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\Temp\\Input\\input.txt")]
+        public string TempInFile {
+            get {
+                return ((string)(this["TempInFile"]));
+            }
+            set {
+                this["TempInFile"] = value;
+            }
+        }
     }
 }
