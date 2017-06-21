@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+//using System.Windows.Forms;
+using System.Windows;
 
 namespace ParseData
 {
@@ -76,6 +78,30 @@ namespace ParseData
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void multipleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog x = new OpenFileDialog();
+            x.Multiselect = true;
+           // x.ShowDialog();
+            string[] result = x.FileNames;
+
+            //OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            
+            //Nullable<bool> result1 = openFileDialog1.ShowDialog();
+            Nullable<bool> result1 = x.ShowDialog();
+            if (result1 == true)
+            {
+                // Open document
+
+                string filename = x.FileName;
+                selectfileTB.Text = filename;
+            }
+
+            //foreach (string y in result)
+            //    MessageBox.Show(y, "Selected Item");
+            //, MessageBoxButtons.OK, MessageBoxIcon.Information
         }
     }
 }
