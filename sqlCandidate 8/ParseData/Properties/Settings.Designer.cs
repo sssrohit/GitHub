@@ -82,5 +82,17 @@ namespace ParseData.Properties {
                 this["TempInFile"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\TempOut\\Convert\\input.txt")]
+        public string textout {
+            get {
+                return ((string)(this["textout"]));
+            }
+            set {
+                this["textout"] = value;
+            }
+        }
     }
 }

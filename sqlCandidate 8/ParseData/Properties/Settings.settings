@@ -17,5 +17,8 @@
     <Setting Name="TempInFile" Type="System.String" Scope="User">
       <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\Temp\Input\input.txt</Value>
     </Setting>
+    <Setting Name="textout" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut\Convert\input.txt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

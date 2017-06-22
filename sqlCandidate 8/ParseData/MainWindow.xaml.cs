@@ -22,6 +22,8 @@ namespace ParseData
     /// </summary>
     public partial class MainWindow : Window
     {
+        OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,22 +31,28 @@ namespace ParseData
             listname1.ItemsSource = dc.ResumeTable;
         }
 
-       
-
         private void parseBtn_Click(object sender, RoutedEventArgs e)
         {
+
+            string path = openFileDialog1.FileName;
+
+            //if (openFileDialog1.ShowDialog() == DialogResult)
+            //{
+            //    System.IO.File.Move(path, Properties.Settings.Default.TempResumeFolder);
+            //}
+            
+            //System.IO.File.Move(path, Properties.Settings.Default.TempInFile);
+            System.IO.File.Move(path, Properties.Settings.Default.TempResumeFolder);
             Parser parser = new Parser();
             parser.ParseData();
             
             DataTable dt = new DataTable();
-
             listname1.ItemsSource = dt.DefaultView;
-           
         }
 
         private void selectBtn_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            
 
             openFileDialog1.InitialDirectory = @"F:\Rohit";
             openFileDialog1.Title = "Browse PDF Files";

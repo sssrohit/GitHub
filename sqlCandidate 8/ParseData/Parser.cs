@@ -89,11 +89,14 @@ namespace ParseData
                     pdfDoc.Save(Properties.Settings.Default.TempOutFile, opts);
                     // Load in the document
                     //Document docpdf = new Document(HttpContext.Current.Server.MapPath("Convert/input.doc"));
-                    Document docpdf = new Document(Properties.Settings.Default.TempOutput);
+                    //Document docpdf = new Document(Properties.Settings.Default.TempOutput);
+                    Document docpdf = new Document(Properties.Settings.Default.TempOutFile);
+
 
                     docpdf.Range.Replace("\t", "\n", false, true);
                     //docpdf.Save(HttpContext.Current.Server.MapPath("Input/input.txt"));
-                    docpdf.Save(Properties.Settings.Default.TempResumeFolder);
+                    //docpdf.Save(Properties.Settings.Default.TempResumeFolder);
+                    docpdf.Save(Properties.Settings.Default.TempInFile);
                     break;
                 case ".doc":
                 case ".docx":
