@@ -107,11 +107,8 @@ F:\Rohit\c#learning\WPF\sqlCandidate 7\sqlCandidate\bin\Debug\sqlCandidate.exe.c
 F:\Rohit\c#learning\WPF\sqlCandidate 7\sqlCandidate\obj\Debug\sqlCandidate.exe
 F:\Rohit\c#learning\WPF\sqlCandidate 7\sqlCandidate\obj\Debug\sqlCandidate.pdb
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\bin\Debug\sqlCandidate.exe.config
-F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.exe
-F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.pdb
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\bin\Debug\sqlCandidate.exe
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\bin\Debug\sqlCandidate.pdb
-F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.csprojResolveAssemblyReference.cache
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\Views\MainWindow.g.cs
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\App.g.cs
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -121,3 +118,5 @@ F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\Views\MainWindo
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.g.resources
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.Properties.Resources.resources
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.csproj.GenerateResource.Cache
+F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.exe
+F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.pdb

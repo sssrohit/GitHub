@@ -61,7 +61,7 @@ namespace ParseData.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\TempOut\\Convert\\input.doc")]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\TempOut\\Convert\\Resume.doc")]
         public string TempOutFile {
             get {
                 return ((string)(this["TempOutFile"]));
@@ -73,7 +73,7 @@ namespace ParseData.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\Temp\\Input\\input.txt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\Temp\\Input\\Resume.txt")]
         public string TempInFile {
             get {
                 return ((string)(this["TempInFile"]));
@@ -85,7 +85,7 @@ namespace ParseData.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\TempOut\\Convert\\input.txt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\GitHub\\sqlCandidate 8\\TempOut\\Convert\\Resume.txt")]
         public string textout {
             get {
                 return ((string)(this["textout"]));

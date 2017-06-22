@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.Data;
+using System.IO;
+//using System.Windows.Forms;
+using System.ServiceProcess;
 
 namespace ParseData
 {
@@ -27,56 +30,92 @@ namespace ParseData
         public MainWindow()
         {
             InitializeComponent();
-            ResumeDBContext dc = new ResumeDBContext(Properties.Settings.Default.ResumeDBpath);
-            listname1.ItemsSource = dc.ResumeTable;
+            //ResumeDBContext dc = new ResumeDBContext(Properties.Settings.Default.ResumeDBpath);
+            //listname1.ItemsSource = dc.ResumeTable;
         }
 
         private void parseBtn_Click(object sender, RoutedEventArgs e)
         {
-
-            string path = openFileDialog1.FileName;
-
+            //FolderBrowserDialog fbd = new FolderBrowserDialog();
+            //string location = fbd.SelectedPath;
+            //string path = openFileDialog1.FileName;
+            //string location = openFileDialog1.SelectedPath;
             //if (openFileDialog1.ShowDialog() == DialogResult)
             //{
             //    System.IO.File.Move(path, Properties.Settings.Default.TempResumeFolder);
             //}
-            
+
+
+            //string sSelectedPath = openFileDialog1.SelectedPath;
             //System.IO.File.Move(path, Properties.Settings.Default.TempInFile);
-            System.IO.File.Move(path, Properties.Settings.Default.TempResumeFolder);
-            Parser parser = new Parser();
-            parser.ParseData();
+            //System.IO.File.Move(location, Properties.Settings.Default.TempResumeFolder);
+
+
+            string MoveFrom = openFileDialog1.FileName;
+
+            string FileName = openFileDialog1.FileName;
+
             
+            //foreach (string files in MoveFrom)
+            //      {
+            //      foreach (string files2 in FileName)
+            //{
+            //    Directory.Move(MoveFrom, );                                   
+            //}
+            // }
+            string TempResumeFileName = string.Empty;
+            TempResumeFileName = Properties.Settings.Default.TempResumeFolder + "\\" + openFileDialog1.SafeFileName;
+
+            if (File.Exists(TempResumeFileName))
+            {
+                try
+                {
+                    File.Delete(TempResumeFileName);
+                }
+                catch (Exception ee)
+                { }
+            }
+            File.Copy(FileName, TempResumeFileName, true);
+            Parser parser = new Parser();
+
+
             DataTable dt = new DataTable();
+            dt = parser.ParseData();
             listname1.ItemsSource = dt.DefaultView;
+
+            //
+
+            //
+
         }
 
         private void selectBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+
 
             openFileDialog1.InitialDirectory = @"F:\Rohit";
             openFileDialog1.Title = "Browse PDF Files";
 
             Nullable<bool> result = openFileDialog1.ShowDialog();
-            if (result == true)
-            {
-                // Open document
-                string filename = openFileDialog1.FileName;
-                selectfileTB.Text = filename;
-            }
+            //if (result == true)
+            //{
+            // Open document
+            string filename = openFileDialog1.FileName;
+            selectfileTB.Text = filename;
+            //}
         }
 
         private void multipleBtn_Click(object sender, RoutedEventArgs e)
         {
-           OpenFileDialog x = new OpenFileDialog();
-           x.Multiselect = true;
-           var result = x.FileNames;
-           x.ShowDialog();
+            OpenFileDialog x = new OpenFileDialog();
+            x.Multiselect = true;
+            var result = x.FileNames;
+            x.ShowDialog();
 
-           foreach (string fileName in x.FileNames)
-           {
-               selectfileTB.Text = fileName;
-           }
+            foreach (string fileName in x.FileNames)
+            {
+                selectfileTB.Text = fileName;
+            }
         }
 
         private void exitBtn_Click(object sender, System.Windows.RoutedEventArgs e)

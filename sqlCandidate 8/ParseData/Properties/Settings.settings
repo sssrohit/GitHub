@@ -12,13 +12,13 @@
       <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut</Value>
     </Setting>
     <Setting Name="TempOutFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut\Convert\input.doc</Value>
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut\Convert\Resume.doc</Value>
     </Setting>
     <Setting Name="TempInFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\Temp\Input\input.txt</Value>
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\Temp\Input\Resume.txt</Value>
     </Setting>
     <Setting Name="textout" Type="System.String" Scope="User">
-      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut\Convert\input.txt</Value>
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\TempOut\Convert\Resume.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>
