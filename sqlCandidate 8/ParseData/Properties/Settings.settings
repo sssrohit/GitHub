@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ResumeDBpath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">F:\Rohit\c#learning\Databases\ResumeDB.sdf</Value>
+      <Value Profile="(Default)">F:\Rohit\c#learning\Databases\ResumeDataBase.sdf</Value>
     </Setting>
     <Setting Name="TempResumeFolder" Type="System.String" Scope="User">
       <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\sqlCandidate 8\Temp</Value>

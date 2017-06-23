@@ -65,7 +65,6 @@
     </Compile>
     <Compile Include="CandidateDbaseContext.cs" />
     <Compile Include="Models\Candidate.cs" />
-    <Compile Include="ResumeDBContext.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">

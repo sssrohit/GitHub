@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace sqlCandidate
+namespace ParseData
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -22,8 +22,8 @@ namespace sqlCandidate
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="F:\\Rohit\\c#learning\\Databases\\ResumeDB.sdf")]
-	public partial class ResumeDBContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="F:\\Rohit\\c#learning\\Databases\\ResumeDataBase.sdf")]
+	public partial class ResumeDataBaseContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,25 +35,25 @@ namespace sqlCandidate
     partial void DeleteResumeTable(ResumeTable instance);
     #endregion
 		
-		public ResumeDBContext(string connection) : 
+		public ResumeDataBaseContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ResumeDBContext(System.Data.IDbConnection connection) : 
+		public ResumeDataBaseContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ResumeDBContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ResumeDataBaseContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public ResumeDBContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public ResumeDataBaseContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
@@ -82,13 +82,17 @@ namespace sqlCandidate
 		
 		private string _Phone;
 		
-		private string _Skills;
-		
 		private string _Summary;
+		
+		private string _Skills;
 		
 		private string _Experience;
 		
 		private string _Education;
+		
+		private string _Interests;
+		
+		private string _Languages;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -102,14 +106,18 @@ namespace sqlCandidate
     partial void OnEmailChanged();
     partial void OnPhoneChanging(string value);
     partial void OnPhoneChanged();
-    partial void OnSkillsChanging(string value);
-    partial void OnSkillsChanged();
     partial void OnSummaryChanging(string value);
     partial void OnSummaryChanged();
+    partial void OnSkillsChanging(string value);
+    partial void OnSkillsChanged();
     partial void OnExperienceChanging(string value);
     partial void OnExperienceChanged();
     partial void OnEducationChanging(string value);
     partial void OnEducationChanged();
+    partial void OnInterestsChanging(string value);
+    partial void OnInterestsChanged();
+    partial void OnLanguagesChanging(string value);
+    partial void OnLanguagesChanged();
     #endregion
 		
 		public ResumeTable()
@@ -137,7 +145,7 @@ namespace sqlCandidate
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(100)")]
 		public string Name
 		{
 			get
@@ -157,7 +165,7 @@ namespace sqlCandidate
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(100)")]
 		public string Email
 		{
 			get
@@ -177,7 +185,7 @@ namespace sqlCandidate
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Phone ", Storage="_Phone", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="NVarChar(100)")]
 		public string Phone
 		{
 			get
@@ -197,27 +205,7 @@ namespace sqlCandidate
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Skills", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string Skills
-		{
-			get
-			{
-				return this._Skills;
-			}
-			set
-			{
-				if ((this._Skills != value))
-				{
-					this.OnSkillsChanging(value);
-					this.SendPropertyChanging();
-					this._Skills = value;
-					this.SendPropertyChanged("Skills");
-					this.OnSkillsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Summary", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Summary", DbType="NVarChar(100)")]
 		public string Summary
 		{
 			get
@@ -237,7 +225,27 @@ namespace sqlCandidate
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Experience", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Skills", DbType="NVarChar(100)")]
+		public string Skills
+		{
+			get
+			{
+				return this._Skills;
+			}
+			set
+			{
+				if ((this._Skills != value))
+				{
+					this.OnSkillsChanging(value);
+					this.SendPropertyChanging();
+					this._Skills = value;
+					this.SendPropertyChanged("Skills");
+					this.OnSkillsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Experience", DbType="NVarChar(100)")]
 		public string Experience
 		{
 			get
@@ -257,7 +265,7 @@ namespace sqlCandidate
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Education", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Education", DbType="NVarChar(100)")]
 		public string Education
 		{
 			get
@@ -273,6 +281,46 @@ namespace sqlCandidate
 					this._Education = value;
 					this.SendPropertyChanged("Education");
 					this.OnEducationChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Interests", DbType="NVarChar(100)")]
+		public string Interests
+		{
+			get
+			{
+				return this._Interests;
+			}
+			set
+			{
+				if ((this._Interests != value))
+				{
+					this.OnInterestsChanging(value);
+					this.SendPropertyChanging();
+					this._Interests = value;
+					this.SendPropertyChanged("Interests");
+					this.OnInterestsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Languages", DbType="NVarChar(100)")]
+		public string Languages
+		{
+			get
+			{
+				return this._Languages;
+			}
+			set
+			{
+				if ((this._Languages != value))
+				{
+					this.OnLanguagesChanging(value);
+					this.SendPropertyChanging();
+					this._Languages = value;
+					this.SendPropertyChanged("Languages");
+					this.OnLanguagesChanged();
 				}
 			}
 		}

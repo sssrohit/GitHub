@@ -30,7 +30,7 @@ namespace ParseData
         public MainWindow()
         {
             InitializeComponent();
-            //ResumeDBContext dc = new ResumeDBContext(Properties.Settings.Default.ResumeDBpath);
+            //ResumeDataBaseContext dc = new ResumeDataBaseContext(Properties.Settings.Default.ResumeDBpath);
             //listname1.ItemsSource = dc.ResumeTable;
         }
 
@@ -50,8 +50,6 @@ namespace ParseData
             //System.IO.File.Move(path, Properties.Settings.Default.TempInFile);
             //System.IO.File.Move(location, Properties.Settings.Default.TempResumeFolder);
 
-
-            string MoveFrom = openFileDialog1.FileName;
 
             string FileName = openFileDialog1.FileName;
 
@@ -82,7 +80,7 @@ namespace ParseData
             DataTable dt = new DataTable();
             dt = parser.ParseData();
             listname1.ItemsSource = dt.DefaultView;
-
+           
             //
 
             //

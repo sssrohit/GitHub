@@ -25,7 +25,7 @@ namespace ParseData.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\Databases\\ResumeDB.sdf")]
+        [global::System.Configuration.DefaultSettingValueAttribute("F:\\Rohit\\c#learning\\Databases\\ResumeDataBase.sdf")]
         public string ResumeDBpath {
             get {
                 return ((string)(this["ResumeDBpath"]));

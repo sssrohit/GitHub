@@ -11,6 +11,12 @@ using System.Collections;
 using System.Text.RegularExpressions;
 using Aspose.Words.Lists;
 
+using System.Windows;
+//using System.Net.Http;
+//using System.Net.Http.Formatting;
+//using System.Web.Http.WebHost;
+
+
 namespace ParseData
 {
     public class Parser
@@ -38,17 +44,17 @@ namespace ParseData
             DataTable dt = new DataTable();
             dt.Columns.AddRange(new DataColumn[9]
             { 
-                            new DataColumn("Name", typeof(string)),
-                            new DataColumn("Email", typeof(string)),
-                            new DataColumn("Phone", typeof(string)),
-                            new DataColumn("Summary", typeof(string)),
-                            new DataColumn("Skills", typeof(string)),
-                            new DataColumn("Experience", typeof(string)),
-                            new DataColumn("Education", typeof(string)),
-                            new DataColumn("Interests", typeof(string)),
-                            new DataColumn("Languages", typeof(string))});
+                new DataColumn("Name", typeof(string)),
+                new DataColumn("Email", typeof(string)),
+                new DataColumn("Phone", typeof(string)),
+                new DataColumn("Summary", typeof(string)),
+                new DataColumn("Skills", typeof(string)),
+                new DataColumn("Experience", typeof(string)),
+                new DataColumn("Education", typeof(string)),  
+                new DataColumn("Interests", typeof(string)),
+                new DataColumn("Languages", typeof(string))});
 
-           
+
 
             string TempDIrectorypath = Properties.Settings.Default.TempResumeFolder; //HttpContext.Current.Server.MapPath("Input/");
             DirectoryInfo directoryInfo = new DirectoryInfo(TempDIrectorypath);
@@ -67,7 +73,7 @@ namespace ParseData
                 education = "";
                 interests = "";
                 languages = "";
-                Converter( fileinfo[i].FullName , fileinfo[i].Extension);
+                Converter(fileinfo[i].FullName, fileinfo[i].Extension);
 
                 dt.Rows.Add(name.Trim(','), email.Trim(','), phone.Trim(','), summary.Trim(','), skills.Trim(',').Trim(), experience.Trim(','), education.Trim(','), interests.Trim(','), languages.Trim(','));
             }
@@ -125,9 +131,11 @@ namespace ParseData
 
             //doc.Save(Server.MapPath("Input/input.txt"), SaveFormat.Text);
 
-            //ArrayList list = (ArrayList)HttpContext.Current.Session["Markers"];
-            ArrayList list =new ArrayList();
+           //ArrayList list = (ArrayList)HttpContext.Current.Session["Markers"];
+
+            ArrayList list = (ArrayList)Session["Markers"];
             ArrayList index = new ArrayList();
+            
 
             Hashtable table = new Hashtable();
 
