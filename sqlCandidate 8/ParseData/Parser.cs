@@ -121,9 +121,6 @@ namespace ParseData
         }
         protected void ConvertDocument(string path)
         {
-
-
-
             //Document doc = new Document(HttpContext.Current.Server.MapPath("Input/input.txt"));
             Document doc = new Document(Properties.Settings.Default.TempInFile);
 
