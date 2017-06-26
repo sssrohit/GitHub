@@ -27,6 +27,7 @@ namespace sqlCandidate
             {
 
                 Table<CandidateTable> employee = Accessor.GetEmployeeTable();
+                
                 CandidateTable emp = new CandidateTable();
 
                 emp.Date_Candidate = date;
