@@ -130,10 +130,18 @@ namespace ParseData
             int total = doc.GetChildNodes(NodeType.Paragraph, true).Count;
 
             //doc.Save(Server.MapPath("Input/input.txt"), SaveFormat.Text);
-
            //ArrayList list = (ArrayList)HttpContext.Current.Session["Markers"];
+            //ArrayList list = (ArrayList)Session["Markers"];
 
-            ArrayList list = (ArrayList)Session["Markers"];
+            ArrayList list = new ArrayList();
+            list.Add("summary,Professional Summary");
+            list.Add("specialties");
+            list.Add("skills,Skills Summary");
+            list.Add("experience");
+            list.Add("education,Scholastics");
+            list.Add("interests");
+            list.Add("languages");
+
             ArrayList index = new ArrayList();
             
 

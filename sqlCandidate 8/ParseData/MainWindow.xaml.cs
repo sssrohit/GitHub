@@ -17,6 +17,7 @@ using System.Data;
 using System.IO;
 //using System.Windows.Forms;
 using System.ServiceProcess;
+using System.Collections;
 
 namespace ParseData
 {
@@ -25,13 +26,31 @@ namespace ParseData
     /// </summary>
     public partial class MainWindow : Window
     {
-        OpenFileDialog openFileDialog1 = new OpenFileDialog();
+        OpenFileDialog openFileDialog1 = new OpenFileDialog();    
 
         public MainWindow()
         {
             InitializeComponent();
             //ResumeDataBaseContext dc = new ResumeDataBaseContext(Properties.Settings.Default.ResumeDBpath);
             //listname1.ItemsSource = dc.ResumeTable;
+
+            Parser parser = new Parser();
+            DataTable dt = new DataTable();
+            dt = parser.ParseData();
+            listname1.ItemsSource = dt.DefaultView;
+        }
+
+        public void abclist()
+        {
+            ArrayList list = new ArrayList();
+            list.Add("summary,Professional Summary");
+            list.Add("specialties");
+            list.Add("skills,Skills Summary");
+            list.Add("experience");
+            list.Add("education,Scholastics");
+            list.Add("interests");
+            list.Add("languages");
+            return;
         }
 
         private void parseBtn_Click(object sender, RoutedEventArgs e)
@@ -73,7 +92,15 @@ namespace ParseData
                 catch (Exception ee)
                 { }
             }
-            File.Copy(FileName, TempResumeFileName, true);
+            if(FileName==string.Empty)
+            {
+                MessageBox.Show("Please select file");
+            }
+            else
+            {
+                File.Copy(FileName, TempResumeFileName, true);
+            }
+            
             Parser parser = new Parser();
 
 
