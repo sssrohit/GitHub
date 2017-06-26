@@ -48,6 +48,5 @@
         <Button Content="Multiple Select" Click="multipleBtn_Click" Name="multipleBtn" Width="151" Margin="1133,0,0,42" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"></Button>
         <Button Content="Exit" Click="exitBtn_Click" Name="exitBtn" Width="150" Margin="1348,0,0,42" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
         <TextBox Name="selectfileTB" Height="33" Margin="776,0,0,119" HorizontalAlignment="Left" Width="284" VerticalAlignment="Bottom"/>
-        <TextBox Name="nameTB" Text="{Binding ElementName=listname1, Path=SelectedItem.Name ,Mode=TwoWay}" Height="20" Margin="96,0,0,141" HorizontalAlignment="Left" Width="100" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>
