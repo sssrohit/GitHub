@@ -34,7 +34,7 @@ namespace ParseData
 
 
         /// <summary>
-        /// This function actually parses a folder with resumes 
+        /// This function actually parses a folder with resumes
         /// </summary>
         /// <returns> returns datatable with parsed resume data</returns>
         public DataTable ParseData()
