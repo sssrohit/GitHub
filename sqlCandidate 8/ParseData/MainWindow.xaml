@@ -15,7 +15,7 @@
         </DockPanel>
 
         <TextBlock Text="Resume Parser" FontSize="25" Foreground="Chocolate" Margin="5,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <ListView Name="listname1" Margin="10,43,10,189" BorderThickness="2" RenderTransformOrigin="0.0,0.0" ItemsSource="{Binding ResumeTable}">
+        <ListView Name="listname1" Margin="10,43,10,189" BorderThickness="2" RenderTransformOrigin="0.0,0.0">
             <!--ItemsSource="{Binding ResumeTable}"-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="{x:Type ListViewItem}">

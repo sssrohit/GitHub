@@ -39,12 +39,13 @@ namespace ParseData
         {
             InitializeComponent();
             ResumeDataBaseContext dc = new ResumeDataBaseContext(Properties.Settings.Default.ResumeDBpath);
+
             listname1.ItemsSource = dc.ResumeTable;
 
-            Parser parser = new Parser();
-            DataTable dt = new DataTable();
+            //Parser parser = new Parser();
+            //DataTable dt = new DataTable();
 
-            listname1.ItemsSource = dt.DefaultView;
+            //listname1.ItemsSource = dt.DefaultView;
         }
 
         private void parseBtn_Click(object sender, RoutedEventArgs e)
@@ -75,7 +76,48 @@ namespace ParseData
                 DataTable dt = new DataTable();
                 dt = parser.ParseData();
                 listname1.ItemsSource = dt.DefaultView;
+                //File.Delete(Properties.Settings.Default.TempResumeFolder);
+                //File.Create(Properties.Settings.Default.TempResumeFolder);
+                //for (int i = 0; i <= dt.Rows.Count;i++ )
+                //{
+                    //insert datatable into database
+                    string name = dt.Rows[0]["Name"].ToString();
+                    String email = dt.Rows[0]["Email"].ToString();
+                    String phone = dt.Rows[0]["Phone"].ToString();
+                    String summary = dt.Rows[0]["Summary"].ToString();
+                    String skills = dt.Rows[0]["Skills"].ToString();
+                    String experience =dt.Rows[0]["Experience"].ToString();
+                    String education = dt.Rows[0]["Education"].ToString();
+
+                    InsertOrUpdateEmp(name, email, phone, summary, skills, experience, education);
+                    System.Data.Linq.Table<ResumeTable> emp = GetResumeTable();
+                    listname1.ItemsSource = emp;
+                //}
             }
+        }
+
+        public static void InsertOrUpdateEmp(string name, string email, string phone, string summary, string skills, string experience, string education)
+        {
+            ResumeDataBaseContext dc = new ResumeDataBaseContext(Properties.Settings.Default.ResumeDBpath);
+            //try
+            //{
+            Table<ResumeTable> resume = GetResumeTable();
+            ResumeTable table = new ResumeTable();
+
+            table.Name = name;
+            table.Email = email;
+            table.Phone = phone;
+            table.Summary = summary;
+            table.Skills = skills;
+            table.Experience = experience;
+            table.Education = education;
+
+            resume.InsertOnSubmit(table);
+            resume.Context.SubmitChanges();
+            //}
+            //catch (Exception)
+            //{
+            //}
         }
 
         private void selectBtn_Click(object sender, RoutedEventArgs e)
@@ -151,32 +193,11 @@ namespace ParseData
             String education = dt.Rows[0]["Education"].ToString();
 
             InsertOrUpdateEmp(name, email, phone, summary, skills, experience, education);
+            //InsertOrUpdateEmp(name);
             System.Data.Linq.Table<ResumeTable> emp = GetResumeTable();
             listname1.ItemsSource = emp;
         }
 
-        public static void InsertOrUpdateEmp(string Name, string Email, string Phone, string Summary, string Skills, string Experience, string Education)
-        {
-            ResumeDataBaseContext dc = new ResumeDataBaseContext(Properties.Settings.Default.ResumeDBpath);
-            //try
-            //{
-                Table<ResumeTable> resume = GetResumeTable();
-                ResumeTable table = new ResumeTable();
-
-                table.Name = Name;
-                table.Email = Email;
-                table.Phone = Phone;
-                table.Summary = Summary;
-                table.Skills = Skills;
-                table.Experience = Experience;
-                table.Education = Education;
-                
-                resume.InsertOnSubmit(table);
-                resume.Context.SubmitChanges();
-            //}
-            //catch (Exception)
-            //{
-            //}
-        }
+       
     }
 }

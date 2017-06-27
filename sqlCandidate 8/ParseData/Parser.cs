@@ -93,6 +93,7 @@ namespace ParseData
                     opts.Format = Aspose.Pdf.DocSaveOptions.DocFormat.Doc;
                     opts.Mode = Aspose.Pdf.DocSaveOptions.RecognitionMode.Flow;
                     //pdfDoc.Save(HttpContext.Current.Server.MapPath("Convert/input.doc"), opts);
+
                     pdfDoc.Save(Properties.Settings.Default.TempOutFile, opts);
                     // Load in the document
                     //Document docpdf = new Document(HttpContext.Current.Server.MapPath("Convert/input.doc"));
