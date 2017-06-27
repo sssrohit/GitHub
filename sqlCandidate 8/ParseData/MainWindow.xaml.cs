@@ -59,7 +59,7 @@ namespace ParseData
                 {
                     File.Delete(TempResumeFileName);
                 }
-                catch (Exception ee)
+                catch (Exception)
                 {
                 }
             }
@@ -134,17 +134,21 @@ namespace ParseData
             DataTable dt = new DataTable();
             dt = parser.ParseData();
 
-            //if (listname1.SelectedItems.Count >= 0)
-            //{
-            String name = listname1.SelectedItems[0].ToString();
-            String email = listname1.SelectedItems[1].ToString();
-            String phone = listname1.SelectedItems[2].ToString();
-            String summary = listname1.SelectedItems[3].ToString();
-            String skills = listname1.SelectedItems[4].ToString();
-            String experience = listname1.SelectedItems[5].ToString();
-            String education = listname1.SelectedItems[6].ToString();
-            //    InsertOrUpdateEmp(name, email, phone, summary, skills, experience, education);
-            //}
+            //String name = listname1.SelectedItems[0].ToString();
+            //String email = listname1.SelectedItems[1].ToString();
+            //String phone = listname1.SelectedItems[2].ToString();
+            //String summary = listname1.SelectedItems[3].ToString();
+            //String skills = listname1.SelectedItems[4].ToString();
+            //String experience = listname1.SelectedItems[5].ToString();
+            //String education = listname1.SelectedItems[6].ToString();
+
+            string name = dt.Rows[0]["Name"].ToString();
+            String email = dt.Rows[0]["Email"].ToString();
+            String phone = dt.Rows[0]["Phone"].ToString();
+            String summary = dt.Rows[0]["Summary"].ToString();
+            String skills = dt.Rows[0]["Skills"].ToString();
+            String experience = dt.Rows[0]["Experience"].ToString();
+            String education = dt.Rows[0]["Education"].ToString();
 
             InsertOrUpdateEmp(name, email, phone, summary, skills, experience, education);
             System.Data.Linq.Table<ResumeTable> emp = GetResumeTable();
@@ -154,8 +158,8 @@ namespace ParseData
         public static void InsertOrUpdateEmp(string Name, string Email, string Phone, string Summary, string Skills, string Experience, string Education)
         {
             ResumeDataBaseContext dc = new ResumeDataBaseContext(Properties.Settings.Default.ResumeDBpath);
-            try
-            {
+            //try
+            //{
                 Table<ResumeTable> resume = GetResumeTable();
                 ResumeTable table = new ResumeTable();
 
@@ -169,16 +173,10 @@ namespace ParseData
                 
                 resume.InsertOnSubmit(table);
                 resume.Context.SubmitChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        private void listname1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
+            //}
+            //catch (Exception)
+            //{
+            //}
         }
     }
 }

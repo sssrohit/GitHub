@@ -120,3 +120,4 @@ F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.Pr
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.csproj.GenerateResource.Cache
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.exe
 F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.pdb
+F:\Rohit\c#learning\GitHub\sqlCandidate 8\sqlCandidate\obj\Debug\sqlCandidate.csprojResolveAssemblyReference.cache
