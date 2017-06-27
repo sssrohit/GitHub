@@ -4,18 +4,17 @@
         Title="Super Simple Software" Height="500" Width="1550">
     <Grid>
         <DockPanel>
-
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="_File" Height="50">
-                    <MenuItem Header="_Exit" Click="MenuItem_Click" />
+                <MenuItem Header="_File" Height="30" FontWeight="Bold">
+                    <MenuItem Header="Home" Click="MenuItem_Click_2"/>
+                    <MenuItem Header="_Exit" Click="MenuItem_Click"/>
                 </MenuItem>
-                <MenuItem Header="About Us" Click="MenuItem_Click_1"/>
-               
+                <MenuItem Header="About Us" Click="MenuItem_Click_1" Height="30" FontWeight="Bold"/>
             </Menu>
         </DockPanel>
 
         <TextBlock Text="Resume Parser" FontSize="25" Foreground="Chocolate" Margin="5,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <ListView Name="listname1" Margin="10,43,10,189" BorderThickness="2" RenderTransformOrigin="0.0,0.0">
+        <ListView Name="listname1" Margin="10,43,10,189" BorderThickness="2">
             <!--ItemsSource="{Binding ResumeTable}"-->
             <ListView.ItemContainerStyle>
                 <Style TargetType="{x:Type ListViewItem}">
@@ -49,5 +48,6 @@
         <Button Content="Exit" Click="exitBtn_Click" Name="exitBtn" Width="150" Margin="1348,0,0,42" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
         <TextBox Name="selectfileTB" Height="33" Margin="776,0,0,119" HorizontalAlignment="Left" Width="284" VerticalAlignment="Bottom"/>
         <Button Content="Save" Click="saveBtn_Click" x:Name="saveBtn" Width="150" Margin="910,0,0,42" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
+        <Button Content="Home" Click="homeBtn_Click" x:Name="homeBtn" Width="150" Margin="10,0,0,42" HorizontalAlignment="Left" Height="50" VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold"/>
     </Grid>
 </Window>

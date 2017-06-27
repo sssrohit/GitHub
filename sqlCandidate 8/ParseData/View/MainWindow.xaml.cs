@@ -19,6 +19,7 @@ using System.IO;
 using System.ServiceProcess;
 using System.Collections;
 using System.Data.Linq;
+using ParseData.View;
 
 namespace ParseData
 {
@@ -196,6 +197,20 @@ namespace ParseData
             //InsertOrUpdateEmp(name);
             System.Data.Linq.Table<ResumeTable> emp = GetResumeTable();
             listname1.ItemsSource = emp;
+        }
+
+        private void homeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            StartPage wndw = new StartPage();
+            wndw.Show();
+            this.Close();
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            StartPage wndw = new StartPage();
+            wndw.Show();
+            this.Close();
         }
 
        

@@ -1,0 +1,16 @@
+﻿<Window x:Class="ParseData.View.LoadPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Super Simple Software" Height="500" Width="1500">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File" FontWeight="Bold">
+                    <MenuItem Header="Home"  Click="MenuItem_Click"/>
+                    <MenuItem Header="Exit" Click="MenuItem_Click_1"/>
+                </MenuItem>
+                <MenuItem Header="About Us" Click="MenuItem_Click_2" FontWeight="Bold"/>
+            </Menu>
+        </DockPanel>
+    </Grid>
+</Window>
