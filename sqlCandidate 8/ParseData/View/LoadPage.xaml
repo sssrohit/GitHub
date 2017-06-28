@@ -12,5 +12,11 @@
                 <MenuItem Header="About Us" Click="MenuItem_Click_2" FontWeight="Bold"/>
             </Menu>
         </DockPanel>
+
+        <TextBox Name="selectfileTB" Height="57" Margin="326,136,0,0" HorizontalAlignment="Left" Width="582" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+
+        <Button Content="..." Height="50" Width="50" Margin="944,143,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Click="Button_Click" />
+        <Button Content="Load" Height="50" Width="158" Margin="836,240,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" />
+
     </Grid>
 </Window>

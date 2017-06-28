@@ -126,7 +126,6 @@ namespace ParseData
             openFileDialog1.InitialDirectory = @"F:\Rohit";
             openFileDialog1.Title = "Browse PDF Files";
 
-            Nullable<bool> result = openFileDialog1.ShowDialog();
             string filename = openFileDialog1.FileName;
             selectfileTB.Text = filename;
         }

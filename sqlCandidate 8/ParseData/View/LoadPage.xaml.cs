@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace ParseData.View
 {
@@ -19,6 +20,7 @@ namespace ParseData.View
     /// </summary>
     public partial class LoadPage : Window
     {
+        OpenFileDialog openFileDialog1 = new OpenFileDialog();
         public LoadPage()
         {
             InitializeComponent();
@@ -39,6 +41,15 @@ namespace ParseData.View
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(" \b Super Simple Software \n \b Created by Mr. Rohit \n \b Under the guidance of Mr. Prashant Sir");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            openFileDialog1.InitialDirectory = @"F:\Rohit";
+            openFileDialog1.Title = "Browse PDF Files";
+
+            string filename = openFileDialog1.FileName;
+            selectfileTB.Text = filename;
         }
 
         

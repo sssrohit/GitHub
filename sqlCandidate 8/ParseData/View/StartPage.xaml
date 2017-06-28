@@ -3,6 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Super Simple Software" Height="500" Width="1500">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <DockPanel>
             <Menu DockPanel.Dock="Top"  Height="30" Margin="0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <MenuItem Header="File" Height="30" FontWeight="Bold">
@@ -10,13 +13,15 @@
                 </MenuItem>
                 <MenuItem Header="About Us" FontWeight="Bold" Click="MenuItem_Click"/>
             </Menu>
+
         </DockPanel>
 
-        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" Margin="0,30,0,0">
+        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="16,30,0,0" Width="1442">
             <Button Name="loadBtn" Content="Load" Click="loadBtn_Click" Width="496" FontSize="30" FontWeight="Bold"/>
             <Button Name="validateBtn" Content="Validation" Click="validateBtn_Click" Width="496" FontSize="30" FontWeight="Bold"/>
-            <Button Name="searchBtn" Content="Search" Width="502" FontSize="30" FontWeight="Bold" Click="searchBtn_Click"/>
+            <Button Name="searchBtn" Content="Search" Width="444" FontSize="30" FontWeight="Bold" Click="searchBtn_Click"/>
 
         </StackPanel>
+        <Rectangle x:Name="Dash_Board" Fill="#FFF4F4F5" Margin="16,159,34,23" Stroke="Black"/>
     </Grid>
 </Window>
