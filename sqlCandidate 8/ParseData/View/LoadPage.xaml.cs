@@ -40,16 +40,21 @@ namespace ParseData.View
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(" \b Super Simple Software \n \b Created by Mr. Rohit \n \b Under the guidance of Mr. Prashant Sir");
+            MessageBox.Show("\b Super Simple Software \n \b Created by Mr. Rohit \n \b Under the guidance of Mr. Prashant Sir");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             openFileDialog1.InitialDirectory = @"F:\Rohit";
             openFileDialog1.Title = "Browse PDF Files";
-
+            openFileDialog1.ShowDialog();
             string filename = openFileDialog1.FileName;
             selectfileTB.Text = filename;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
 
         

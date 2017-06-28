@@ -36,7 +36,6 @@ namespace ParseData.View
             MainWindow wndw = new MainWindow();
             wndw.Show();
             this.Close();
-
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
