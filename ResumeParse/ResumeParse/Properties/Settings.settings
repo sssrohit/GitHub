@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ResumeParse.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TempResumeFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\ResumeParse\Temp</Value>
+    </Setting>
+    <Setting Name="ResumeDBpath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\Databases\ResumeDataBase.sdf</Value>
+    </Setting>
+    <Setting Name="TempOutput" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\ResumeParse\TempOut</Value>
+    </Setting>
+    <Setting Name="TempOutFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\ResumeParse\TempOut\Convert\Resume.doc</Value>
+    </Setting>
+    <Setting Name="TempInFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\ResumeParse\Temp\Input\Resume.txt</Value>
+    </Setting>
+    <Setting Name="textout" Type="System.String" Scope="User">
+      <Value Profile="(Default)">F:\Rohit\c#learning\GitHub\ResumeParse\TempOut\Convert\Resume.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
