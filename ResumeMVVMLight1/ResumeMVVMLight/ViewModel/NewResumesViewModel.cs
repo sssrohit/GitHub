@@ -1,10 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
-using ResumeMVVMLight.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ResumeMVVMLight.ViewModel
 {
@@ -30,7 +25,7 @@ namespace ResumeMVVMLight.ViewModel
 
         public void RaiseAllPropertyChange()
         {
-            this.RaisePropertyChanged("AllNewResumes");
+            RaisePropertyChanged("AllNewResumes");
         }
     }
 }

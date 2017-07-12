@@ -101,12 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Design\DesignDataService.cs" />
-    <Compile Include="Model\DataItem.cs" />
-    <Compile Include="Model\DataService.cs" />
-    <Compile Include="Model\IDataService.cs" />
+    <Compile Include="DataEntity\Resume.cs" />
     <Compile Include="Model\MainModel.cs" />
     <Compile Include="ResumeDataBaseContext.cs" />
+    <Compile Include="ResumeParser\ResumeParse.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\NewResumesViewModel.cs" />
